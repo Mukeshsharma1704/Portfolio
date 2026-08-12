@@ -135,10 +135,6 @@ function Contact() {
         <span>
           © {new Date().getFullYear()} Mukesh Sharma
         </span>
-
-        <span>
-          Built with React &amp; passion.
-        </span>
       </div>
     </section>
   );
