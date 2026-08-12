@@ -17,6 +17,23 @@ const navLinks = [
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleNavigation = (href) => {
+    // Close mobile menu first
+    setMenuOpen(false);
+
+    // Wait for menu animation before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 150);
+  };
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -29,35 +46,38 @@ function Navbar() {
     >
       <nav className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
 
-        {/* Logo */}
-        <a
-          href="#home"
+        {/* LOGO */}
+        <button
+          type="button"
+          onClick={() => handleNavigation("#home")}
           className="group relative text-xl font-black tracking-[-0.05em] sm:text-2xl"
         >
           MUKESH SHARMA
           <span className="text-[#f04438]">.</span>
 
           <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#f04438] transition-all duration-300 group-hover:w-full" />
-        </a>
+        </button>
 
-        {/* Desktop Navigation */}
+        {/* DESKTOP NAVIGATION */}
         <div className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
+              type="button"
+              onClick={() => handleNavigation(link.href)}
               className="group relative text-[11px] font-bold uppercase tracking-[0.1em]"
             >
               {link.name}
 
               <span className="absolute -bottom-2 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-[#f04438] transition-all duration-300 group-hover:w-full" />
-            </a>
+            </button>
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <a
-          href="#contact"
+        {/* DESKTOP CTA */}
+        <button
+          type="button"
+          onClick={() => handleNavigation("#contact")}
           className="group hidden items-center gap-3 bg-[#f04438] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.08em] text-white transition-transform duration-300 hover:-translate-y-0.5 lg:flex"
         >
           Let's Work Together
@@ -66,12 +86,12 @@ function Navbar() {
             size={16}
             className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
           />
-        </a>
+        </button>
 
-        {/* Mobile Menu Button */}
+        {/* MOBILE MENU BUTTON */}
         <button
           type="button"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((prev) => !prev)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           className="flex h-11 w-11 items-center justify-center border border-black/15 lg:hidden"
@@ -84,7 +104,7 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -108,12 +128,12 @@ function Navbar() {
           >
             <div className="px-5 py-6 sm:px-8">
 
-              {/* Mobile Navigation */}
+              {/* MOBILE NAVIGATION */}
               {navLinks.map((link, index) => (
-                <motion.a
+                <motion.button
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  type="button"
+                  onClick={() => handleNavigation(link.href)}
                   initial={{
                     opacity: 0,
                     x: -15,
@@ -126,22 +146,22 @@ function Navbar() {
                     delay: index * 0.05,
                     duration: 0.3,
                   }}
-                  className="block border-b border-black/10 py-4 text-sm font-bold uppercase tracking-[0.08em]"
+                  className="block w-full border-b border-black/10 py-4 text-left text-sm font-bold uppercase tracking-[0.08em]"
                 >
                   {link.name}
-                </motion.a>
+                </motion.button>
               ))}
 
-              {/* Mobile CTA */}
-              <a
-                href="#contact"
-                onClick={() => setMenuOpen(false)}
-                className="mt-6 flex items-center justify-between bg-[#f04438] px-5 py-4 text-xs font-bold uppercase tracking-[0.08em] text-white"
+              {/* MOBILE CTA */}
+              <button
+                type="button"
+                onClick={() => handleNavigation("#contact")}
+                className="mt-6 flex w-full items-center justify-between bg-[#f04438] px-5 py-4 text-left text-xs font-bold uppercase tracking-[0.08em] text-white"
               >
                 Let's Work Together
 
                 <FiArrowUpRight size={18} />
-              </a>
+              </button>
             </div>
           </motion.div>
         )}
