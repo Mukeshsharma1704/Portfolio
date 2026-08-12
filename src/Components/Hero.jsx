@@ -42,9 +42,7 @@ function Hero() {
 
         {/* Main grid */}
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-          {/* ========================================
-              LEFT SIDE
-          ======================================== */}
+          {/* LEFT SIDE */}
 
           <div>
             {/* HERO TITLE */}
@@ -59,7 +57,20 @@ function Hero() {
                 }}
                 className="relative z-10 font-display text-[17vw] leading-[0.78] tracking-[-0.065em] text-[#171717] sm:text-[13vw] lg:text-[8vw]"
               >
-                I DESIGN.
+                <motion.span
+                  whileHover={{
+                    y: -8,
+                    scale: 1.04,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 16,
+                  }}
+                  className="inline-block cursor-pointer"
+                >
+                  I DESIGN.
+                </motion.span>
               </motion.h1>
 
               {/* I CODE */}
@@ -73,7 +84,20 @@ function Hero() {
                 }}
                 className="relative z-20 ml-[4vw] mt-1 font-display text-[17vw] italic leading-[0.78] tracking-[-0.075em] text-[#171717] sm:text-[13vw] lg:text-[8vw]"
               >
-                I CODE.
+                <motion.span
+                  whileHover={{
+                    y: -8,
+                    scale: 1.04,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 16,
+                  }}
+                  className="inline-block cursor-pointer"
+                >
+                  I CODE.
+                </motion.span>
               </motion.h1>
 
               {/* I MAKE */}
@@ -87,18 +111,20 @@ function Hero() {
                 }}
                 className="relative z-30 ml-[11vw] mt-[-0.8vw] font-hand text-[20vw] leading-[0.8] tracking-[-0.035em] text-[#f04438] sm:text-[16vw] lg:text-[9vw]"
               >
-                I MAKE.
-
                 <motion.span
-                  initial={{ width: 0 }}
-                  animate={{ width: "58%" }}
-                  transition={{
-                    delay: 0.7,
-                    duration: 0.7,
-                    ease: [0.22, 1, 0.36, 1],
+                  whileHover={{
+                    y: -8,
+                    scale: 1.04,
                   }}
-                  className="absolute bottom-[-6px] left-[5%] h-[2px] -rotate-1 bg-[#f04438]"
-                />
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 16,
+                  }}
+                  className="inline-block cursor-pointer"
+                >
+                  I MAKE.
+                </motion.span>
               </motion.h1>
             </div>
 
@@ -179,9 +205,7 @@ function Hero() {
             </motion.div>
           </div>
 
-          {/* ========================================
-              RIGHT SIDE - YOUR PHOTO
-          ======================================== */}
+          {/* RIGHT SIDE - YOUR PHOTO */}
 
           <HeroCard />
         </div>
@@ -251,9 +275,7 @@ function HeroCard() {
       }}
       className="relative mx-auto min-h-[650px] w-full max-w-[560px]"
     >
-      {/* ========================================
-          LARGE SOFT BACKGROUND CIRCLE
-      ======================================== */}
+      {/* LARGE SOFT BACKGROUND CIRCLE */}
 
       <motion.div
         animate={{
@@ -268,21 +290,15 @@ function HeroCard() {
         className="absolute left-1/2 top-[10%] h-[78%] w-[82%] -translate-x-1/2 rounded-full bg-[#f04438]/10"
       />
 
-      {/* ========================================
-          LARGE OFF-WHITE OVAL OUTLINE
-      ======================================== */}
+      {/* LARGE OFF-WHITE OVAL OUTLINE */}
 
       <div className="absolute left-1/2 top-[6%] h-[82%] w-[78%] -translate-x-1/2 rounded-[48%] border-[3px] border-[#f7f2e8]" />
 
-      {/* ========================================
-          SECOND SUBTLE OVAL
-      ======================================== */}
+      {/* SECOND SUBTLE OVAL */}
 
       <div className="absolute left-[8%] top-[18%] h-[62%] w-[84%] rounded-[50%] border border-[#f04438]/10" />
 
-      {/* ========================================
-          TOP RIGHT DECORATIVE CIRCLE
-      ======================================== */}
+      {/* TOP RIGHT DECORATIVE CIRCLE */}
 
       <motion.div
         animate={{
@@ -296,21 +312,15 @@ function HeroCard() {
         className="absolute right-[4%] top-[2%] h-24 w-24 rounded-full border-[8px] border-[#f04438]/20 sm:h-28 sm:w-28"
       />
 
-      {/* ========================================
-          SMALL TOP LEFT DOT
-      ======================================== */}
+      {/* SMALL TOP LEFT DOT */}
 
       <div className="absolute left-[8%] top-[12%] h-5 w-5 rounded-full bg-[#f04438]/25" />
 
-      {/* ========================================
-          SMALL OUTLINED CIRCLE
-      ======================================== */}
+      {/* SMALL OUTLINED CIRCLE */}
 
       <div className="absolute right-[13%] top-[29%] h-5 w-5 rounded-full border-[2px] border-[#f04438]/30" />
 
-      {/* ========================================
-          SMALL BOTTOM LEFT DOT
-      ======================================== */}
+      {/* SMALL BOTTOM LEFT DOT */}
 
       <motion.div
         animate={{
@@ -324,9 +334,7 @@ function HeroCard() {
         className="absolute bottom-[18%] left-[4%] h-4 w-4 rounded-full bg-[#f04438]/30"
       />
 
-      {/* ========================================
-          DECORATIVE DOT GRID
-      ======================================== */}
+      {/* DECORATIVE DOT GRID */}
 
       <div className="absolute right-[7%] top-[42%] grid grid-cols-3 gap-2 opacity-40">
         <span className="h-1.5 w-1.5 rounded-full bg-[#f04438]" />
@@ -342,22 +350,15 @@ function HeroCard() {
         <span className="h-1.5 w-1.5 rounded-full bg-[#f04438]" />
       </div>
 
-      {/* ========================================
-          GEOMETRIC LINES
-      ======================================== */}
+      {/* GEOMETRIC LINES */}
 
-      {/* Left horizontal line */}
       <div className="absolute left-[5%] top-[40%] h-px w-20 -rotate-[12deg] bg-[#f04438]/15" />
 
-      {/* Right vertical line */}
       <div className="absolute right-[8%] top-[48%] h-28 w-px rotate-[18deg] bg-[#f04438]/15" />
 
-      {/* Bottom diagonal line */}
       <div className="absolute bottom-[28%] right-[8%] h-px w-24 rotate-[35deg] bg-[#f04438]/15" />
 
-      {/* ========================================
-          PLUS SYMBOLS
-      ======================================== */}
+      {/* PLUS SYMBOLS */}
 
       <div className="absolute left-[12%] top-[34%] text-2xl font-light text-[#f04438]/25">
         +
@@ -367,9 +368,7 @@ function HeroCard() {
         +
       </div>
 
-      {/* ========================================
-          PERSONAL IMAGE
-      ======================================== */}
+      {/* PERSONAL IMAGE */}
 
       <motion.img
         src="/projects/profile.png"
@@ -385,9 +384,7 @@ function HeroCard() {
         draggable="false"
       />
 
-      {/* ========================================
-          AVAILABLE FOR WORK
-      ======================================== */}
+      {/* AVAILABLE FOR WORK */}
 
       <motion.div
         initial={{ opacity: 0, y: 15 }}
