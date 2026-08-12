@@ -69,7 +69,7 @@ function Hero() {
                   }}
                   className="inline-block cursor-pointer"
                 >
-                  I DESIGN.
+                  I DESIGN
                 </motion.span>
               </motion.h1>
 
@@ -96,7 +96,7 @@ function Hero() {
                   }}
                   className="inline-block cursor-pointer"
                 >
-                  I CODE.
+                  I CODE
                 </motion.span>
               </motion.h1>
 
@@ -123,7 +123,7 @@ function Hero() {
                   }}
                   className="inline-block cursor-pointer"
                 >
-                  I MAKE.
+                  I MAKE
                 </motion.span>
               </motion.h1>
             </div>
