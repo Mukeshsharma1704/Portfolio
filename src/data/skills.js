@@ -37,7 +37,7 @@ export const skills = [
   {
     name: "MongoDB",
     category: "DATABASE",
-    level: "Intermediate",
+    level: "Advanced",
   },
   {
     name: "SQL",
