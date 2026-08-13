@@ -7,7 +7,7 @@ export const skills = [
   {
     name: "React.js",
     category: "FRONTEND",
-    level: "Intermediate",
+    level: "Advanced",
   },
   {
     name: "HTML",
