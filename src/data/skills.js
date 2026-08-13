@@ -27,7 +27,7 @@ export const skills = [
   {
     name: "Node.js",
     category: "BACKEND",
-    level: "Intermediate",
+    level: "Advanced",
   },
   {
     name: "Express.js",
