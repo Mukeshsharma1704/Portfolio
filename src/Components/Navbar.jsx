@@ -52,7 +52,7 @@ function Navbar() {
           onClick={() => handleNavigation("#home")}
           className="group relative text-xl font-black tracking-[-0.05em] sm:text-2xl"
         >
-          MUKESH KUMAR
+          MUKESH SHARMA
           <span className="text-[#f04438]">.</span>
 
           <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#f04438] transition-all duration-300 group-hover:w-full" />
