@@ -139,7 +139,7 @@ function Hero() {
               className="mt-10 max-w-[500px] text-sm leading-7 text-[#444] sm:text-base"
             >
               I create modern, responsive and interactive digital
-              experiences using React, JavaScript and thoughtful design.
+              experiences using React, JavaScript and thoughtful design and many more.
             </motion.p>
 
             {/* Buttons */}
