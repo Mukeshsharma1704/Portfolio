@@ -16,7 +16,7 @@ function Hero() {
       {/* Decorative circle */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 0, opacity: 1 }}
+        animate={{ scale: 1, opacity: 1 }}
         transition={{
           duration: 0.9,
           delay: 0.3,
